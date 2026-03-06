@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Madhan Sakthivel</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .contact-section {
+            padding-top: 100px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info-side h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-info-side > p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .contact-details-list {
+            margin-bottom: 35px;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 20px;
+            padding: 18px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-detail-item:hover {
+            border-color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .contact-detail-item i {
+            font-size: 22px;
+            color: var(--primary);
+            width: 45px;
+            height: 45px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-detail-item div h4 {
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+
+        .contact-detail-item div p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .contact-form-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 35px;
+        }
+
+        .form-field {
+            margin-bottom: 22px;
+        }
+
+        .form-field label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .form-field input,
+        .form-field textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text);
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            outline: none;
+        }
+
+        .form-field textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        .form-row-inline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .social-contact {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .social-contact a {
+            width: 45px;
+            height: 45px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-contact a:hover {
+            background: var(--primary);
+            border-color: transparent;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-row-inline {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <header>
+        <a href="index.html" class="logo">&lt;Madhan/&gt;</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact-section container">
+        <div class="section-header">
+            <h2>Contact Me</h2>
+            <p>Let's work together on your next project</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info-side">
+                <h3>Let's Talk</h3>
+                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+
+                <div class="contact-details-list">
+                    <div class="contact-detail-item">
+                        <i class="ri-mail-line"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>madhanlaxz@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="ri-phone-line"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 6384314350</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="ri-map-pin-line"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Dharmapuri, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-contact">
+                    <a href="https://github.com/madhanlaxz-oss" target="_blank"><i class="ri-github-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/madhan-laxz" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                    <a href="https://www.instagram.com/its_me_madhan444/" target="_blank"><i class="ri-instagram-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <form>
+                    <div class="form-row-inline">
+                        <div class="form-field">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-field">
+                            <label>Your Email</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Project Inquiry" required>
+                    </div>
+                    <div class="form-field">
+                        <label>Message</label>
+                        <textarea placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        Send Message <i class="ri-send-plane-fill"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

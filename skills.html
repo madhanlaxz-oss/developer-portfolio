@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Madhan Sakthivel</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .skills-section {
+            padding-top: 100px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .skill-box {
+            padding: 30px;
+        }
+
+        .skill-box h3 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .skill-box h3 i {
+            font-size: 28px;
+            color: var(--primary);
+        }
+
+        .skill-row {
+            margin-bottom: 20px;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .skill-info span:first-child {
+            font-weight: 500;
+        }
+
+        .skill-info span:last-child {
+            color: var(--primary);
+        }
+
+        .skill-track {
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 8px;
+            animation: fillBar 1.5s ease forwards;
+            transform-origin: left;
+            transform: scaleX(0);
+        }
+
+        @keyframes fillBar {
+            to { transform: scaleX(1); }
+        }
+
+        .tools-section {
+            margin-top: 60px;
+        }
+
+        .tools-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .tool-box {
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        .tool-box i {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .tool-box span {
+            display: block;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 992px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .tools-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <header>
+        <a href="index.html" class="logo">&lt;Madhan/&gt;</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="skills-section container">
+        <div class="section-header">
+            <h2>My Skills</h2>
+            <p>Technologies I work with</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-box glass-card">
+                <h3><i class="ri-code-box-line"></i> Frontend</h3>
+                <div class="skill-row">
+                    <div class="skill-info">
+                        <span>HTML5 & CSS3</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-info">
+                        <span>React Basics</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-fill" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-box glass-card">
+                <h3><i class="ri-server-line"></i> Backend</h3>
+                <div class="skill-row">
+                    <div class="skill-info">
+                        <span>Python</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-info">
+                        <span>Java</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-info">
+                        <span>SQL & Databases</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tools-section">
+            <div class="section-header" style="margin-bottom: 40px;">
+                <h2 style="font-size: 32px;">Tools & Technologies</h2>
+            </div>
+            <div class="tools-row">
+                <div class="tool-box glass-card">
+                    <i class="ri-github-fill"></i>
+                    <span>Git & GitHub</span>
+                </div>
+                <div class="tool-box glass-card">
+                    <i class="ri-code-s-slash-line"></i>
+                    <span>VS Code</span>
+                </div>
+                <div class="tool-box glass-card">
+                    <i class="ri-figma-line"></i>
+                    <span>Figma</span>
+                </div>
+                <div class="tool-box glass-card">
+                    <i class="ri-terminal-box-line"></i>
+                    <span>Command Line</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

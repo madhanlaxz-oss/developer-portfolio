@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Madhan Sakthivel</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .about-section {
+            padding-top: 100px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 20px;
+            border: 2px solid var(--border);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .about-content h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-content > p {
+            color: var(--text-muted);
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .info-item i {
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        .info-item div h4 {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .info-item div p {
+            font-size: 16px;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .about-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .about-image {
+                position: static;
+                margin-bottom: 30px;
+            }
+            .about-image img {
+                max-width: 300px;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <header>
+        <a href="index.html" class="logo">&lt;Madhan/&gt;</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="about-section container">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <p>Get to know more about me and my journey</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="IMG_20260301_075435.png" alt="Madhan Sakthivel">
+            </div>
+            <div class="about-content">
+                <h3>I'm a Full Stack Developer</h3>
+                <p>I am a motivated and detail-oriented Computer Science graduate with a solid foundation in software development and web technologies. Proficient in Python and Java for backend development, I have hands-on experience in building interactive web applications.</p>
+                <p>I specialize in creating modern, responsive websites and applications that provide exceptional user experiences. My passion for clean code and creative design drives me to continuously learn and implement the latest technologies.</p>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="ri-graduation-cap-line"></i>
+                        <div>
+                            <h4>Education</h4>
+                            <p>Artificial Intelligence And Machine Learning</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="ri-briefcase-line"></i>
+                        <div>
+                            <h4>Experience</h4>
+                            <p>Fresher</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="ri-mail-line"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>madhanlaxz@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="ri-map-pin-line"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Dharmapuri, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-buttons">
+                    <a href="contact.html" class="btn btn-primary">Hire Me</a>
+                    <a href="Madhan Sakthivel Resume For IT.pdf" target="_blank" class="btn btn-outline">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

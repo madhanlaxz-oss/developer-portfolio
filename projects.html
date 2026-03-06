@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Madhan Sakthivel</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .projects-section {
+            padding-top: 100px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+        }
+
+        .project-image {
+            height: 180px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .project-content p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .project-tags span {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .project-links a {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background: var(--primary);
+            border-color: transparent;
+            color: white;
+        }
+
+        @media (max-width: 992px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <header>
+        <a href="index.html" class="logo">&lt;Madhan/&gt;</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="projects-section container">
+        <div class="section-header">
+            <h2>My Projects</h2>
+            <p>Some of my recent work</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image"><i class="ri-user-line"></i></div>
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>Personal portfolio with modern glassmorphism design and smooth animations.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="ri-github-fill"></i></a>
+                        <a href="#"><i class="ri-external-link-line"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><i class="ri-school-line"></i></div>
+                <div class="project-content">
+                    <h3>Smart College Website</h3>
+                    <p>Complete college management system with student portal and course registration.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="ri-github-fill"></i></a>
+                        <a href="#"><i class="ri-external-link-line"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><i class="ri-vip-crown-line"></i></div>
+                <div class="project-content">
+                    <h3>College Voting System</h3>
+                    <p>Secure online voting platform for college elections with real-time results.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>SQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="ri-github-fill"></i></a>
+                        <a href="#"><i class="ri-external-link-line"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><i class="ri-calendar-check-line"></i></div>
+                <div class="project-content">
+                    <h3>Attendance Management</h3>
+                    <p>Automated attendance tracking system with QR code scanning and reports.</p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Android</span>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="ri-github-fill"></i></a>
+                        <a href="#"><i class="ri-external-link-line"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><i class="ri-robot-2-line"></i></div>
+                <div class="project-content">
+                    <h3>AI Chatbot</h3>
+                    <p>Intelligent conversational AI assistant with NLP capabilities.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="ri-github-fill"></i></a>
+                        <a href="#"><i class="ri-external-link-line"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><i class="ri-gamepad-line"></i></div>
+                <div class="project-content">
+                    <h3>Memory Matching Game</h3>
+                    <p>Interactive card matching game with timer and score tracking.</p>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="ri-github-fill"></i></a>
+                        <a href="#"><i class="ri-external-link-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
