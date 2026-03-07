@@ -21,6 +21,26 @@
     --gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #06b6d4 100%);
 }
 
+[data-theme="light"] {
+    --dark: #f1f5f9;
+    --darker: #ffffff;
+    --card: rgba(255, 255, 255, 0.7);
+    --border: rgba(0, 0, 0, 0.1);
+    --text: #1e293b;
+    --text-muted: #64748b;
+}
+
+[data-theme="light"] .bg-gradient {
+    background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.1), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(236, 72, 153, 0.08), transparent),
+        var(--darker);
+}
+
+[data-theme="light"] header {
+    background: rgba(255, 255, 255, 0.8);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -76,6 +96,7 @@ header {
 .navbar {
     display: flex;
     gap: 35px;
+    margin-left: auto;
 }
 
 .navbar a {
@@ -216,6 +237,41 @@ header {
     transform: translateY(-3px);
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+.theme-toggle:hover {
+    background: var(--gradient);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+[data-theme="light"] .theme-toggle .ri-sun-line {
+    display: none;
+}
+
+[data-theme="light"] .theme-toggle .ri-moon-line {
+    display: block;
+}
+
+.theme-toggle .ri-moon-line {
+    display: none;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -244,14 +300,68 @@ header {
     }
     
     .navbar {
-        gap: 20px;
+        gap: 15px;
     }
     
     .navbar a {
-        font-size: 13px;
+        font-size: 12px;
+    }
+    
+    .theme-toggle {
+        margin-left: 10px;
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
     }
     
     .section-header h2 {
-        font-size: 32px;
+        font-size: 28px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+}
+
+/* Android/Mobile Specific */
+@media (max-width: 480px) {
+    header {
+        padding: 12px 4%;
+    }
+    
+    .navbar {
+        gap: 12px;
+    }
+    
+    .navbar a {
+        font-size: 11px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .glass-card {
+        padding: 20px;
+    }
+    
+    .social-icons a {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .btn:active,
+    .social-icons a:active,
+    .theme-toggle:active {
+        transform: scale(0.95);
+    }
+    
+    .navbar a {
+        padding: 8px 0;
     }
 }

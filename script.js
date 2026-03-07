@@ -1,4 +1,22 @@
 
+// Theme Toggle
+const themeToggle = document.querySelector('.theme-toggle');
+const html = document.documentElement;
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  html.setAttribute('data-theme', savedTheme);
+}
+
+// Toggle theme on button click
+themeToggle.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+});
+
 // Add event listener to the navbar links
 document.querySelectorAll('.navbar a').forEach(link => {
   link.addEventListener('click', () => {
